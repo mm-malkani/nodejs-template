@@ -1,0 +1,30 @@
+{
+  "name": "nodejs-template",
+  "version": "1.0.0",
+  "description": "This is a sample nodejs file strcuture for a typical backend server",
+  "main": "./src/server.js",
+  "type": "module",
+  "scripts": {
+    "lint": "prettier --config prettier.config.cjs \"**/*.{js,ts,jsx,tsx,json}\" --write --ignore-unknown",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,jsx,tsx,json}": "prettier --write --ignore-unknown"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mm-malkani/nodejs-template.git"
+  },
+  "author": "Muhammad Malkani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mm-malkani/nodejs-template/issues"
+  },
+  "homepage": "https://github.com/mm-malkani/nodejs-template#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "morgan": "^1.10.0"
+  }
+}
