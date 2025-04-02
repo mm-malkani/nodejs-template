@@ -5,6 +5,7 @@ import cors from 'cors';
 import morgan from 'morgan';
 import cluster from 'cluster';
 import { cpus } from 'os';
+import deviceRouter from "./devices/deviceRoute.js";
 
 const app = express()
 
@@ -32,13 +33,12 @@ if(cluster.isPrimary) {
 } else {
     //Routes
 
-    //Inset Routes Here
+    //Insert Routes Here
+    app.use('/devices', deviceRouter)
 
     app.get('/', (req, res) => {
         res.send("Hello World")
     })
-
-    //Import SQL Database
 
     //Start Server
     app.listen(process.env.PORT, () => {
